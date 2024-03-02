@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background: #11111b;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    background-color: #181825;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 10px;
+}
+
+nav h1{
+    color: #cdd6f4;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ca9ee6;
+    font-weight: bold;
+    animation: unhoveranim 250ms 1 forwards;
+}
+
+.main {
+    animation: mainanim 3500ms infinite forwards;
+}
+
+@keyframes mainanim {
+    0% {
+        text-shadow: 0 0 3px #cba6f7, 0 0 5px #cba6f7
+    }
+    50% {
+        text-shadow: 0 0 5px #cba6f7, 0 0 10px #cba6f7
+    }
+    100% {
+        text-shadow: 0 0 3px #cba6f7, 0 0 5px #cba6f7
+    }
+}
+
+nav ul li a:hover{
+    animation: hoveranim 250ms 1 forwards;
+}
+
+@keyframes hoveranim {
+    100% {
+        font-size: 105%;
+        text-shadow: 0 0 5px #cba6f7, 0 0 7px #cba6f7;
+    }
+}
+@keyframes unhoveranim {
+    0% {
+        font-size: 105%;
+        text-shadow: 0 0 5px #cba6f7, 0 0 7px #cba6f7
+    }
+    100% {
+        font-size: 100%;
+        text-shadow:0 0 3px #6c7086, 0 0 5px #6c7086;
+    }
+}
